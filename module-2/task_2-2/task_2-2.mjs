@@ -108,8 +108,8 @@ printOut(newLine);
 
 printOut("--- Part 9 ----------------------------------------------------------------------------------------------");
 /* Put your code below here!*/
-const r = Math.floor(Math.random() * 360) + 1; //random tall mellom 1 og 360//
-printOut("Random nummer mellom 1 og 360 : " +r); //bruker Math.floor for å få heltall//
+const r = Math.floor(Math.random() * 360) + 1; //tilfeldig tall mellom 1 og 360//
+printOut("Tilfeldig nummer mellom 1 og 360 : " +r); //bruker Math.floor for å få heltall//
 printOut(newLine);
 
 /* Task 10*/
