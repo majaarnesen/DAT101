@@ -10,8 +10,28 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>[What is the difference between invoking and creating a function?]</li>
+      <p>[Å opprette (definere) en funksjon betyr å skrive selve funksjonen — du lager en blokk med kode som kan gjenbrukes senere. Å kalle (invokere) en funksjon betyr å utføre den koden ved å bruke funksjonsnavnet etterfulgt av parenteser.]</p>
+      <li>[Explain the syntax regarding semicolons and code blocks.]</li>
+      <p>[semikolon avslutter statements (bruk dem konsekvent), og {} definerer blokker og dermed variabellivslengde (scope).]</p>
+      <li>[What happens when we try to store values from a function when it doesn't return any?]</li>
+      <p>[Hvis en funksjon ikke returnerer noe, vil et kall til den gi verdien undefined. Dersom du gjør f.eks. const x = fn(); blir x undefined, og å prøve å bruke egenskaper eller metoder på undefined gir en runtime-feil (TypeError).]</p>
+      <li>[How do we separate parameters from each other when creating a function?]</li>
+      <p>[Parametre skilles med komma inni parentesene etter funksjonsnavnet. Eksempel: function minFunksjon(a, b, c) { /* ... */ }.]</p>
+      <li>[Explain how parameter names are related during the invocation and creation of a function]</li>
+      <p>
+        [Parameterne i funksjonsdefinisjonen er lokale plassholdere (lokale variabler) som får verdier fra argumentene ved kall. Argumentene matches etter posisjon: første argument -> første parameter osv. Navnene må ikke være like variablene i koden
+        som kaller funksjonen — de fungerer bare lokalt inne i funksjonen. Primitiver kopieres, objekter/arrayer overføres som referanse.]
+      </p>
+      <li>[Explain why a parameter is undefined when a function call is missing a parameter.]</li>
+      <p>
+        [Parameteren blir undefined fordi JavaScript setter manglende argumenter til undefined ved kall — parameteren er en lokal v ariabel som ikke får noen verdi hvis du ikke sender inn et argument (du kan bruke standardverdier for å unngå dette).]
+      </p>
+      <li>[Explain what happens when we use recursive functions.]</li>
+      <p>
+        [Rekursjon betyr at en funksjon kaller seg selv. Hver kall oppretter en ny stack‑frame med egne lokale variabler, og rekursjonen må ha en stopp‑tilstand (base case) ellers vil den fortsette til en stack overflow oppstår. Rekursive løsninger
+        er naturlige for problemer som deles i mindre deler (f.eks. faktorielle, tre‑traversering), men kan være mindre effektive enn iterative løsninger hvis ikke optimalisert (f.eks. med memoization eller tail‑call).]
+      </p>
     </ol>
     <script type="module" src="./task_3-3.mjs" defer></script>
   </body>
