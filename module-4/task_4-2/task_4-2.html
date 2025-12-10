@@ -10,8 +10,35 @@
       <span id="txtOut" style="white-space: nowrap"></span>
     </div>
     <ol>
-      <li>[Write the question here, and copy this for more questions]</li>
-      <p>[Write your answer here, and copy this for more answers]</p>
+      <li>[What is an array?]</li>
+      <p>[Et array er en datastruktur som lagrer en liste med elementer i én variabel. Hvert element kan nås via sin indeks (posisjon) i arrayet, som starter på 0.]</p>
+      <li>[What does it mean to "Hardcode"?]</li>
+      <p>[Hardcoding betyr å skrive verdier direkte inn i koden, i stedet for å generere dem dynamisk eller lese dem fra input. For eksempel: const numbers = [1,2,3,4,5] er hardcoding.]</p>
+      <li>[Explain what happens in task 3, and how we can traverse an array if we dont know its length]</li>
+      <p>
+        [I task 3: En tekststreng blir renset for tegnsetting. Strengen blir delt opp i ord, som lagres i et array. En løkke skriver ut hvert ord med indeksen sin. Vi kan iterere gjennom et array med ukjent lengde ved å bruke array.length i en
+        for-løkke, eller metoder som forEach(). Da stopper løkken automatisk når alle elementene er besøkt.]
+      </p>
+      <li>[Why is it beneficial to store instances of a class in arrays (task 6)?]</li>
+      <p>[Å lagre objekter (instanser) i arrays lar oss: Enkelt håndtere flere objekter. Iterere gjennom alle objektene med løkker. Utføre operasjoner (som utskrift eller sortering) på alle objektene på en strukturert måte.]</p>
+      <li>[Explain the Eweekdays object from task 7]</li>
+      <p>
+        [EWeekdays er et objekt som lagrer ukedager med bitmask-verdier: Hver weekday har en unik verdi (0x01, 0x02, ...) som identifiserer dagen. workdays kombinerer flere hverdager med bitwise OR (0x01 | 0x02 | 0x04 | 0x08 | 0x10 = 0x1F). weekends
+        kombinerer lørdag og søndag (0x20 | 0x40 = 0x60). For å lage WorkoutDays med mandag, onsdag og torsdag: workoutDays: { value: 0x01 | 0x04 | 0x08, name: "WorkoutDays" } Her lagres value som en kombinasjon av de valgte dagene, som kan brukes
+        til bitvise operasjoner]
+      </p>
+      <li>[Explain how a "callback" routine works in sorting (task 8)]</li>
+      <p>
+        [En callback i sortering er en funksjon som sendes til .sort() som bestemmer rekkefølgen på elementene. Den blir kalt gjentatte ganger for par av elementer: arr.sort(function(a, b) { return a - b; }); Returnerer negativt → a kommer før b
+        Returnerer 0 → behold samme rekkefølge Returnerer positivt → a kommer etter b]
+      </p>
+      <li>[What happens in the sorting routines you created?]</li>
+      <p>
+        [I stigende sortering: (a, b) => a - b Sammenligner to elementer om gangen. Subtraherer b fra a: Negativt → a før b Positivt → a etter b I synkende sortering er subtraksjonen reversert (b - a). Arrayet bruker verdien som returneres fra
+        callbacken for å bestemme rekkefølgen.]
+      </p>
+      <li>[In task 10, explain what the first element of the array contains]</li>
+      <p>[Det første elementet i 2D-arrayet (grid[0]) er den første raden, som selv er et array med 9 kolonner. Hvert element i raden inneholder tekst som viser rad og kolonne, f.eks. "Row 0, Col 0", "Row 0, Col 1", …, "Row 0, Col 8".]</p>
     </ol>
     <script type="module" src="./task_4-2.mjs" defer></script>
   </body>
