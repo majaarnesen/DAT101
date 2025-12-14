@@ -97,8 +97,46 @@
   </div>
 </fieldset>
 <ol>
-  <li>[Write the question here, and copy this for more questions]</li>
-  <p>[Write your answer here, and copy this for more answers]</p>
+  <li>[In this assignment, we use the DOM. Explain how this library can help us develop interactive web
+pages]</li>
+  <p>[DOM (Document Object Model) er et programmeringsgrensesnitt 
+    som representerer HTML-dokumentet som et tre av objekter. 
+    Hver HTML-element blir et objekt som kan manipuleres med 
+    JavaScript. Dette gjør det mulig å lage interaktive nettsider, 
+    fordi man kan lese og endre innhold, struktur og stil dynamisk 
+    uten å laste siden på nytt. For eksempel kan vi oppdatere tekstfelt 
+    eller resultater ved å endre innerHTML, legge til nye elementer 
+    som <option> i en <select> eller opprette nye rader i en 
+      tabell, slik som i oppgavene i koden. DOM gjør det altså mulig 
+      å respondere på brukerhandlinger og gi en mer interaktiv opplevelse.]</p>
+  <li>[What is an event? Simply explain what happens when we add an event listener to an object]</li>
+  <p>[Et event er en handling eller hendelse som skjer i nettleseren, ofte som 
+    følge av brukerinteraksjon, som å klikke på en knapp, skrive på tastatur eller 
+    velge et alternativ. Når vi legger til en event listener på et element, forteller 
+    vi nettleseren at den skal kjøre en bestemt funksjon når den spesifikke 
+    hendelsen skjer. Nettleseren overvåker elementet for den aktuelle handlingen, 
+    og når eventet inntreffer, kjøres funksjonen automatisk. For eksempel i koden: 
+    når brukeren klikker på knappen cmbTask1Calculate, blir funksjonen cmbTask1CalculateClick 
+    kjørt for å beregne areal og omkrets av rektangelet.]</p>
+  <li>[Sometimes we need to use an event object to get data from the event. Explain how this event
+object is structured, don't explain all functions or attributes. Try to explain, for example, how to
+retrieve data from a keyboard or mouse]</li>
+  <p>[Når et event skjer, oppretter nettleseren et event-objekt som sendes til 
+    event-håndteringsfunksjonen. Dette objektet inneholder informasjon om hendelsen, 
+    for eksempel hvilket element som utløste den (target), type hendelse (type) og andre 
+    relevante data. Ved tastaturhendelser kan man for eksempel bruke event.key for å finne 
+    ut hvilken tast som ble trykket, og event.target for å finne hvilket input-felt som 
+    fikk tastetrykket, slik som i Task 2. Ved mus-hendelser kan man bruke event.target.value 
+    for å finne ut hvilken knapp eller valg som ble aktivert. Event-objektet gir altså 
+    kontekst og informasjon slik at vi kan reagere korrekt på brukerens handlinger.]</p>
+  <li>[Explain the main difference between DOM id and DOM name. Can we have identical IDs?]</li>
+  <p>[id er en unik identifikator som skal være unik i hele dokumentet, og brukes 
+    når man vil hente eller manipulere ett spesifikt element, for eksempel med 
+    document.getElementById("cmbTask1Calculate"). name kan derimot brukes av flere elementer, 
+    og brukes ofte for å gruppere elementer, som for eksempel alle checkboxene med 
+    name="chkTask3" i Task 3. Dette gjør det enkelt å hente en gruppe elementer samtidig. 
+    Man kan ikke ha identiske id-er, da dette kan føre til feil eller uventet oppførsel 
+    når man prøver å hente elementer via id]</p>
 </ol>
 <script type="module" src="./task_4-3.mjs" defer></script>
 </body>
