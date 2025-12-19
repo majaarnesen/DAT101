@@ -169,9 +169,10 @@ selectTask6Girls.addEventListener("change", SelectGirlsChange);
 const selectMovieGenre = document.getElementById("selectMovieGenre");
 const txtMovieTitle = document.getElementById("txtMovieTitle");
 const txtMovieDirector = document.getElementById("txtMovieDirector");
-const txtMovieRating = document.getElementById("txtMovieRating");
+const txtMovieRate = document.getElementById("txtMovieRate");
 const cmbAddMovie = document.getElementById("cmbAddMovie");
 const tblMovies = document.getElementById("tblMovies");
+let movieCounter = 1;
 
 // Fyll selectMovieGenre med data fra MovieGenre array
 for (let i = 0; i < MovieGenre.length; i++) {
@@ -186,7 +187,7 @@ function cmbAddMovieClick() {
   const title = txtMovieTitle.value;
   const genre = MovieGenre[parseInt(selectMovieGenre.value)];
   const director = txtMovieDirector.value;
-  const rating = txtMovieRating.value;
+  const rating = txtMovieRate.value;
 
   if (title === "" || director === "" || rating === "") {
     alert("Please fill in all fields!");
@@ -195,15 +196,17 @@ function cmbAddMovieClick() {
 
   // Lager en ny rad i tabellen
   const row = tblMovies.insertRow();
-  row.insertCell(0).appendChild(document.createTextNode(title));
-  row.insertCell(1).appendChild(document.createTextNode(genre));
-  row.insertCell(2).appendChild(document.createTextNode(director));
-  row.insertCell(3).appendChild(document.createTextNode(rating));
+  row.insertCell(0).appendChild(document.createTextNode(movieCounter.toString()));
+  row.insertCell(1).appendChild(document.createTextNode(title));
+  row.insertCell(2).appendChild(document.createTextNode(genre));
+  row.insertCell(3).appendChild(document.createTextNode(director));
+  row.insertCell(4).appendChild(document.createTextNode(rating));
+  movieCounter++;
 
   // Tøm input-feltene
   txtMovieTitle.value = "";
   txtMovieDirector.value = "";
-  txtMovieRating.value = "";
+  txtMovieRate.value = "5";
   selectMovieGenre.value = "0";
 }
 
